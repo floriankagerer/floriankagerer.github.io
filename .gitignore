@@ -1,0 +1,5 @@
+_site/
+.jekyll-cache/
+*.code-workspace
+Gemfile
+*.lock
