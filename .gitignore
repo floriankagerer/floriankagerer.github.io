@@ -3,3 +3,5 @@ _site/
 *.code-workspace
 Gemfile
 *.lock
+docs/
+test/

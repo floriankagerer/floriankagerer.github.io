@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "Dataset"
+    url: /dataset/
+  - title: "Scoreboard"
+    url: /scoreboard/
+  - title: "About"
+    url: /about/
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
