@@ -1,7 +1,9 @@
 _site/
 .jekyll-cache/
 *.code-workspace
-Gemfile
+# Gemfile
 *.lock
 docs/
 test/
+package-lock.json
+package.json
