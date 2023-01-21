@@ -110,9 +110,9 @@ author:
   location         : "St. Florian, Austria"
   email            : 
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:florian.research@icloud.com"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:florian.research@icloud.com"
     - label: "floriankagerer"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/floriankagerer"
