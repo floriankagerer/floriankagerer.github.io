@@ -1,9 +1,11 @@
 # main links
 main:
+  - title: "Publications"
+    url: /publications/
   - title: "Dataset"
     url: /dataset/
-  - title: "Scoreboard"
-    url: /scoreboard/
+  - title: "Leaderboard"
+    url: /leaderboard/
   - title: "About"
     url: /about/
   # - title: "Quick-Start Guide"
