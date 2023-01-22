@@ -1,0 +1,3 @@
+author: Firstname Surname
+e-mail: firstname.surname@domain.com
+filename: filename_of_packing_plans.json
