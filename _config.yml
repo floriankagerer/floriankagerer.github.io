@@ -11,16 +11,16 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "own" # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "FK | 3D Robotic Bin Packing"
+title                    : "FK"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Florian Kagerer"
-description              : "An amazing website."
+description              : "Personal homepage of Florian Kagerer."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -110,15 +110,18 @@ author:
   location         : "St. Florian, Austria"
   email            : 
   links:
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   url: "mailto:florian.research@icloud.com"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:flink-furnier0v@icloud.com"
     - label: "floriankagerer"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/floriankagerer"
     - label: "florian-kagerer"
       icon: "fab fa-fw fa-linkedin"
       url: "https://at.linkedin.com/in/florian-kagerer"
+    - label: "Florian Kagerer"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0002-4433-9060"
 
 # Site Footer
 footer:

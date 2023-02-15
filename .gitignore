@@ -7,3 +7,5 @@ docs/
 test/
 package-lock.json
 package.json
+
+.DS_Store
