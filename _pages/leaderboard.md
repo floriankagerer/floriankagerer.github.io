@@ -33,7 +33,7 @@ table th:nth-of-type(7) {width: 10%;}
 |:-----:|:-----:|:----:|:---------:|:---------|:----:|-------------:|
 | <span style="color:gold">**1**</span>  | 0.724553  | Offline 3DBP | [sisyphus](https://github.com/josch/sisyphus){:target="_blank"} | F.&nbsp;Kagerer | 2022-12-05 | <a href="/assets/packing_plans/2022-12-05_kagerer_sisyphus_offline3dbp.json" download class="fa fa-download"></a>
 | <span style="color:silver">**2**</span>    | 0.197363 | O3DBP   | [Online-3D-BPP-PCT](https://github.com/alexfrom0815/Online-3D-BPP-PCT){:target="_blank"} | F.&nbsp;Kagerer |2022-11-25 |  <a href="/assets/packing_plans/2022-11-25_kagerer_o3dbpp-pct_O3dbp.json" download class="fa fa-download"></a>
-| <span style="color:#cd7f32">**3**</span>   | 0.015612 | O3DBP-3-2  | heuristic [O3DBP-3-2](https://github.com/floriankagerer/bed-bpp-env/tree/main/code/heuristics/O3DBP_3_2.py){:target="_blank"} | F.&nbsp;Kagerer | 2023-02-07 | <a href="/assets/packing_plans/2023-02-07_kagerer_heuristic-O3DBP-3-2_O3DBP-3-2.json" download class="fa fa-download"></a>
+| <span style="color:#cd7f32">**3**</span>   | 0.020356 | O3DBP-3-2  | heuristic [O3DBP-3-2](https://github.com/floriankagerer/bed-bpp-env/tree/main/code/heuristics/O3DBP_3_2.py){:target="_blank"} | F.&nbsp;Kagerer | 2023-02-19 | <a href="/assets/packing_plans/2023-02-19_kagerer_heuristic-O3DBP-3-2_O3DBP-3-2.json" download class="fa fa-download"></a>
 | 4  | 0.010930 | Offline 3DBP   | [xflp](https://github.com/hschneid/xflp){:target="_blank"} | F.&nbsp;Kagerer |2022-12-04 | <a href="/assets/packing_plans/2022-12-04_kagerer_xflp_output_asc-z_offline3dbp.json" download class="fa fa-download"></a>
 
 
