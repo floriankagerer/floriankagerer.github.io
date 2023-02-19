@@ -111,11 +111,11 @@ To this end, for each packing plan a stability check in Blender is carried out. 
 </video></center>
 
 
-The *stability check is successful*, when any item's movement in the height is less than 0.01 meters. In the video, for `O3DBP-3-2` and `xflp` the stability check fails. (The failure of the packing plan of `xflp` is obvious. For `O3DBP-3-2` you see that the item between the green and the blue item in the 4th layer is falling down.) 
+The *stability check is successful*, when any item's movement in the height is less than 0.01 meters for 10 seconds. In the video, for `xflp` the stability check fails. 
 
-Consequently, the contribution of this packing plan to the overall rating of `xflp` and `O3DBP-3-2` is zero.
+Consequently, the contribution of this packing plan to the overall rating of `xflp` is zero.
 
-For the stable piles of `Online-3D-BPP-PCT` and `sisyphus`, we have to determine the amount of items that are completely placed below the height level of 2 meters. As an example, this procedure is visualized for `sisyphus`' packing plan in the following video.
+For the stable piles of `Online-3D-BPP-PCT`, `O3DBP-3-2` and `sisyphus`, we have to determine the amount of items that are completely placed below the height level of 2 meters. As an example, this procedure is visualized for `sisyphus`' packing plan in the following video.
 
 
 <!-- Items for Rating of an Algorithm -->
