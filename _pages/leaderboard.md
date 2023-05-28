@@ -91,13 +91,15 @@ Quick links: [<i class="fa fa-upload"></i><i class="fab fa-dropbox"></i>]({{url_
 
 <!--LEADERBOARD-->
 
+
+
 <table>
     <thead>
         <th class="rank">           Rank    </th>
         <th class="score">          Score </th>
         <th class="task">           Task </th>
         <th class="algorithm">      Algorithm</th>
-        <th class="images">         Images</th>
+        <th class="images">         Images <span  title="Clicking on any image redirects you to a OneDrive file that shows visualizations of all packing plans. Note that these files have approximately 360 MB." style="border-bottom: 1px dotted; width: 4cm;"><i class="fa fa-info-circle" aria-hidden="true"></i></span></th>
         <th class="submitter">      Submitter</th>
         <th class="date">           Date </th>
         <th class="packingplan">    Packing Plan</th>
@@ -148,7 +150,7 @@ Quick links: [<i class="fa fa-upload"></i><i class="fab fa-dropbox"></i>]({{url_
             <td class="images"> <!-- Images -->
                 <div>
                     <!-- PDF Link -->
-                    <a href="/assets/leaderboard_visualization/online-3d-bpp-pct/all_packing_plans.pdf" target="_blank">
+                    <a href="https://1drv.ms/b/s!AmjGTsdpTDmPhnIh8tFQhnrE0_7a?e=gAoDNj" target="_blank">
                         <!-- Image 1 / order 00100007 -->
                         <img    src="/assets/leaderboard_visualization/online-3d-bpp-pct/order_00100007.png"
                                 width="100" height="100"     
@@ -184,7 +186,7 @@ Quick links: [<i class="fa fa-upload"></i><i class="fab fa-dropbox"></i>]({{url_
             <td class="images"> <!-- Images -->
                 <div>
                     <!-- PDF Link -->
-                    <a href="/assets/leaderboard_visualization/heuristic-o3dbp-3-2/all_packing_plans.pdf" target="_blank">
+                    <a href="https://1drv.ms/b/s!AmjGTsdpTDmPhnOJuX87XyiztQ7R?e=sgZQaA" target="_blank">
                         <!-- Image 1 / order 00100007 -->
                         <img    src="/assets/leaderboard_visualization/heuristic-o3dbp-3-2/order_00100007.png"
                                 width="100" height="100"     
@@ -220,7 +222,7 @@ Quick links: [<i class="fa fa-upload"></i><i class="fab fa-dropbox"></i>]({{url_
             <td class="images"> <!-- Images -->
                 <div>
                     <!-- PDF Link -->
-                    <a href="/assets/leaderboard_visualization/xflp/all_packing_plans.pdf" target="_blank">
+                    <a href="https://1drv.ms/b/s!AmjGTsdpTDmPhnBnKbw9WZ3_4g8_?e=2gkeEf" target="_blank">
                         <!-- Image 1 / order 00100007 -->
                         <img    src="/assets/leaderboard_visualization/xflp/order_00100007.png"
                                 width="100" height="100"     
