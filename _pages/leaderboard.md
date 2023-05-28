@@ -112,7 +112,7 @@ Quick links: [<i class="fa fa-upload"></i><i class="fab fa-dropbox"></i>]({{url_
             <td class="images"> <!-- Images -->
                 <div>
                     <!-- PDF Link -->
-                    <a href="/assets/leaderboard_visualization/sisyphus/all_packing_plans.pdf" target="_blank">
+                    <a href="https://1drv.ms/b/s!AmjGTsdpTDmPhnHDhSYRYOQXgk2x?e=lsJuBV" target="_blank">
                         <!-- Image 1 / order 00100007 -->
                         <img    src="/assets/leaderboard_visualization/sisyphus/order_00100007.png"
                                 width="100" height="100"     
