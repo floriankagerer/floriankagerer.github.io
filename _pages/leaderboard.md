@@ -144,7 +144,7 @@ Quick links: [<i class="fa fa-upload"></i><i class="fab fa-dropbox"></i>]({{url_
         <!-- ALGORITHM PCT-->
         <tr>
             <td class="rank">    <span style="color:silver"><b>2</b></span>   </td> 
-            <td class="score">    0.197363    </td> 
+            <td class="score">    0.197204    </td> 
             <td class="task">    O3DBP    </td> 
             <td class="algorithm"> <a href="https://github.com/alexfrom0815/Online-3D-BPP-PCT" target="_blank">Online-3D-BPP-PCT</a> </td>
             <td class="images"> <!-- Images -->
