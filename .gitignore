@@ -9,3 +9,5 @@ package-lock.json
 package.json
 
 .DS_Store
+
+deploy_locally.sh
