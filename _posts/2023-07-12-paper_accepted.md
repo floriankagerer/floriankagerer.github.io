@@ -17,7 +17,9 @@ I am very happy to share that our paper "{{tt_bed-bpp}}: Benchmarking Dataset fo
 Whenever you use the dataset, please cite our publication:
 
 >
-> TBD
+> Kagerer F, Beinhofer M, Stricker S, Nüchter A. BED-BPP: Benchmarking dataset for robotic bin packing problems. *The International Journal of Robotics Research*. 2023;0(0). doi:10.1177/02783649231193048 \\
+> <a href="https://floriankagerer.github.io//assets/publications/Kagereretal2023-ijjr.bib" target="_blank">[BibTeX]</a>
+<a href="https://doi.org/10.1177/02783649231193048" target="_blank">[DOI]</a>
 >
 
 Do not forget to upload the results of your algorithm on the {{tt_bed-bpp}} dataset to the [leaderboard](/leaderboard){:target="_blank"}.

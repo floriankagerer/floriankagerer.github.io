@@ -10,7 +10,7 @@ toc: true
 <!-- Definition of variables -->
 {% capture ref_bed-bpp_file %} "/assets/bed-bpp/bed-bpp_v1.json" {% endcapture %}  <!-- use with {{ref_bed-bpp_file}} -->
 {% capture tt_bed-bpp %}<tt>BED-BPP</tt>{% endcapture %} <!-- use with {{tt_bed-bpp}} -->
-{% capture url_publication %} . {% endcapture %} <!-- use with {{url_publication}} -->
+{% capture url_publication %} https://doi.org/10.1177/02783649231193048 {% endcapture %} <!-- use with {{url_publication}} -->
 
 <!-- Quick links -->
 <small>
@@ -19,7 +19,15 @@ Quick links: <a href={{ref_bed-bpp_file}} download class="fa fa-download"> {{tt_
 
 
 <!-- Intro -->
-We present our benchmark dataset for robotic bin packing, called {{tt_bed-bpp}}. We aim to provide a dataset that is used to compare the performance of algorithms that solve many variants of the three-dimensional bin packing problem.
+We present our benchmarking dataset for robotic bin packing, called {{tt_bed-bpp}}. We aim to provide a dataset that is used to compare the performance of algorithms that solve many variants of the three-dimensional bin packing problem.
+
+Whenever you use the dataset, please cite our publication:
+
+>
+> Kagerer F, Beinhofer M, Stricker S, Nüchter A. BED-BPP: Benchmarking dataset for robotic bin packing problems. *The International Journal of Robotics Research*. 2023;0(0). doi:10.1177/02783649231193048 \\
+> <a href="https://floriankagerer.github.io//assets/publications/Kagereretal2023-ijjr.bib" target="_blank">[BibTeX]</a>
+<a href="https://doi.org/10.1177/02783649231193048" target="_blank">[DOI]</a>
+>
 
 
 <!-- Description -->
