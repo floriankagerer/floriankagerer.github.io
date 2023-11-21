@@ -10,8 +10,7 @@ toc: true
 
 ### Journal Papers
 <!-- IJRR: BED-BPP 2023-->
-- Kagerer F, Beinhofer M, Stricker S, Nüchter A. BED-BPP: Benchmarking dataset for robotic bin packing problems. *The International Journal of Robotics Research*. 2023;0(0). doi:10.1177/02783649231193048
-\\
+- Kagerer F, Beinhofer M, Stricker S, Nüchter A. BED-BPP: Benchmarking dataset for robotic bin packing problems. The International Journal of Robotics Research. 2023;42(11):1007-1014. doi:10.1177/02783649231193048
 <a href="https://floriankagerer.github.io/assets/publications/Kagereretal2023-ijrr.bib" target="_blank">[BibTeX]</a>
 <a href="https://doi.org/10.1177/02783649231193048" target="_blank">[DOI]</a>
 <a href="https://robotik.informatik.uni-wuerzburg.de/telematics/download/ijrr2023.pdf" target="_blank">[URL]</a>
