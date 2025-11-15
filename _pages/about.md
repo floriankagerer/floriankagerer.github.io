@@ -3,11 +3,11 @@ layout: category
 permalink: /about/
 title: "About"
 author_profile: true
-last_modified_at: 2023-02-14
+last_modified_at: 2025-11-15
 toc: true
 ---
 
-Florian Kagerer was born in Linz in 1994. He received his 
+Florian Enzenhofer (Kagerer) was born in Linz in 1994. He received his 
 
 <ul style="list-style-type:none;margin-left:-15px">
     <li><i class="fa fa-graduation-cap"></i> Bachelor of Science in <i>Technical Mathematics</i> in 2018 and his</li>
