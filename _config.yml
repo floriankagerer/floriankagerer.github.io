@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "own" # "default" # "air", "aqua", "contrast", "dark"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "FK"
+title                    : "FE"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Florian Kagerer"
-description              : "Personal homepage of Florian Kagerer."
+name                     : "Florian Enzenhofer"
+description              : "Personal homepage of Florian Enzenhofer."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -104,7 +104,7 @@ baidu_site_verification  :
 
 # Site Author
 author:
-  name             : "Florian Kagerer"
+  name             : "Florian Enzenhofer (Kagerer)"
   avatar           : "/assets/img/pic_florian.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Software Developer"
   location         : "St. Florian, Austria"
@@ -119,7 +119,7 @@ author:
     - label: "florian-kagerer"
       icon: "fab fa-fw fa-linkedin"
       url: "https://at.linkedin.com/in/florian-kagerer"
-    - label: "Florian Kagerer"
+    - label: "Florian Enzenhofer"
       icon: "fab fa-fw fa-orcid"
       url: "https://orcid.org/0000-0002-4433-9060"
 
