@@ -1,6 +1,6 @@
 ---
 title: "Submission received"
-permalink: /posts/:title/banpu_lahcsisr
+permalink: /posts/submission_received/banpu_lahcsisr
 # categories:
 #   - Posts
 # tags:
