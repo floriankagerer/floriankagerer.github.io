@@ -14,10 +14,12 @@
         {% include leaderboard/algorithms/sisyphus.md rank=1 %}
         <!-- ALGORITHM PCT-->
         {% include leaderboard/algorithms/pct.md rank=2 %}
+        <!-- ALGORITHM banpu-->
+        {% include leaderboard/algorithms/banpu.md rank=3 %}
         <!-- ALGORITHM heuristic O3DBP-3-2 -->
-        {% include leaderboard/algorithms/o3dbp_3_2.md rank=3 %}
+        {% include leaderboard/algorithms/o3dbp_3_2.md rank=4 %}
         <!-- ALGORITHM xflp  -->
-        {% include leaderboard/algorithms/xflp.md rank=4 %}
+        {% include leaderboard/algorithms/xflp.md rank=5 %}
         <!-- ALGORITHM tbd-->
     </tbody>
 </table>
