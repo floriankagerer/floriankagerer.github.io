@@ -1,0 +1,74 @@
+<!doctype html>
+{% comment %}
+  Standalone layout for the PET-Physics project page. It deliberately does not
+  extend the Minimal Mistakes `default` layout: no masthead, sidebar or theme CSS.
+  Styles live in /assets/css/pet-physics.css.
+{% endcomment %}
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include seo.html %}
+    {% include head/custom.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/pet-physics.css' | relative_url }}">
+  </head>
+
+  <body class="pp">
+    <a class="pp-skip" href="#main">Skip to content</a>
+
+    <header class="pp-bar">
+      <a class="pp-bar__back" href="{{ '/' | relative_url }}">&larr; {{ site.title | default: 'Home' }}</a>
+      {% comment %} Filled by pet-physics.js with the README's headings. {% endcomment %}
+      <nav class="pp-bar__nav" id="pp-nav" aria-label="Page sections"></nav>
+    </header>
+
+    <main id="main">
+      <section class="pp-hero">
+        <p class="pp-hero__kicker">{{ page.kicker }}</p>
+        <h1 class="pp-hero__title">{{ page.title }}</h1>
+        <p class="pp-hero__subtitle">{{ page.subtitle }}</p>
+
+        <p class="pp-hero__authors">
+          {% for author in page.authors %}<span>{{ author.name }}{% if author.affiliation %}<sup>{{ author.affiliation }}</sup>{% endif %}</span>{% endfor %}
+        </p>
+        <p class="pp-hero__venue">{{ page.venue }}</p>
+
+        <ul class="pp-links">
+          {% for link in page.links %}
+            <li>
+              {% if link.url %}
+                <a class="pp-btn" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                  {% if link.icon == 'github' %}{% include icons/github.svg %}{% endif %}
+                  {{ link.label }}
+                </a>
+              {% else %}
+                <span class="pp-btn is-disabled" aria-disabled="true">{{ link.label }}<small>soon</small></span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+
+        {% if page.banner %}
+          <figure class="pp-hero__banner">
+            <img src="{{ page.banner }}" alt="{{ page.banner_alt | escape }}" width="1536" height="1024" decoding="async">
+          </figure>
+        {% endif %}
+      </section>
+
+      <div class="pp-content" id="pp-readme" data-repo="{{ page.github_repo }}" aria-busy="true">
+        <p class="pp-status" role="status">Loading README&hellip;</p>
+        <noscript>
+          <p class="pp-status">This page shows the README from GitHub and needs JavaScript.
+            <a href="https://github.com/{{ page.github_repo }}">Read it on GitHub.</a></p>
+        </noscript>
+      </div>
+    </main>
+
+    <footer class="pp-footer">
+      <span>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+      <a href="{{ '/' | relative_url }}">Back to {{ site.title | default: 'site' }}</a>
+    </footer>
+
+    <script src="{{ '/assets/js/pet-physics.js' | relative_url }}" defer></script>
+  </body>
+</html>
