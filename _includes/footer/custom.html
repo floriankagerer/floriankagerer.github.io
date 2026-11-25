@@ -1,3 +1,7 @@
 <!-- start custom footer snippets -->
 
+{% comment %} Page front matter: `extra_js` (list of scripts). {% endcomment %}
+{% for js in page.extra_js %}<script src="{{ js | relative_url }}" defer></script>
+{% endfor %}
+
 <!-- end custom footer snippets -->
