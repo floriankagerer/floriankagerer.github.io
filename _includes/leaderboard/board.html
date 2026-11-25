@@ -1,0 +1,48 @@
+{%- comment -%}
+  Builds the leaderboard from _data/leaderboard.yml: sorted by score (highest first), equal scores share
+  a rank ("1, 2, 2, 4"). The top 3 entries form the podium, the others are listed below it.
+{%- endcomment -%}
+{%- assign entries = site.data.leaderboard | sort: "score" | reverse -%}
+{%- assign tasks = entries | map: "task" | uniq | sort -%}
+
+<section class="lb" id="leaderboard" aria-label="Leaderboard">
+  {%- if entries.size > 0 %}
+  <div class="lb-toolbar" hidden>
+    <div class="lb-filters" role="group" aria-label="Filter by task">
+      <button type="button" class="lb-filter" data-task="" aria-pressed="true">All</button>
+      {%- for task in tasks %}
+      <button type="button" class="lb-filter" data-task="{{ task | escape }}" aria-pressed="false">{{ task }}</button>
+      {%- endfor %}
+    </div>
+    <p class="lb-count" role="status" aria-live="polite"></p>
+  </div>
+
+  <ol class="lb-podium">
+    {%- assign rank = 0 -%}{%- assign previous_score = -1 -%}
+    {%- for entry in entries -%}
+      {%- if entry.score != previous_score -%}{%- assign rank = forloop.index -%}{%- endif -%}
+      {%- assign previous_score = entry.score -%}
+      {%- if forloop.index <= 3 -%}
+        {% include leaderboard/entry.html entry=entry rank=rank variant="podium" %}
+      {%- endif -%}
+    {%- endfor %}
+  </ol>
+
+  {%- if entries.size > 3 %}
+  <ol class="lb-list">
+    {%- assign rank = 0 -%}{%- assign previous_score = -1 -%}
+    {%- for entry in entries -%}
+      {%- if entry.score != previous_score -%}{%- assign rank = forloop.index -%}{%- endif -%}
+      {%- assign previous_score = entry.score -%}
+      {%- if forloop.index > 3 -%}
+        {% include leaderboard/entry.html entry=entry rank=rank variant="row" %}
+      {%- endif -%}
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+
+  <p class="lb-empty" hidden>No entries for this task yet.</p>
+  {%- else %}
+  <p class="lb-empty">No entries yet.</p>
+  {%- endif %}
+</section>

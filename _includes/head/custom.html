@@ -9,4 +9,9 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
+{% comment %} Page front matter: `extra_css` (list of stylesheets) and `noindex: true`. {% endcomment %}
+{% for css in page.extra_css %}<link rel="stylesheet" href="{{ css | relative_url }}">
+{% endfor %}
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
 <!-- end custom head snippets -->

@@ -1,0 +1,62 @@
+{%- comment -%}
+  One leaderboard entry (list item).
+  Parameters: entry (a hash of _data/leaderboard.yml), rank (number), variant ("podium" or "row").
+{%- endcomment -%}
+{%- assign e = include.entry -%}
+
+{%- assign medal = "" -%}
+{%- if include.rank == 1 -%}{%- assign medal = " lb-gold" -%}
+{%- elsif include.rank == 2 -%}{%- assign medal = " lb-silver" -%}
+{%- elsif include.rank == 3 -%}{%- assign medal = " lb-bronze" -%}
+{%- endif -%}
+
+{%- comment -%} Score with 4 decimals (liquid drops trailing zeros), bar width in percent. {%- endcomment -%}
+{%- assign score_parts = e.score | round: 4 | append: "" | split: "." -%}
+{%- assign score_decimals = score_parts[1] | append: "0000" | slice: 0, 4 -%}
+{%- assign score_pct = e.score | times: 100 | at_most: 100 | at_least: 0 -%}
+
+<li class="lb-entry lb-entry--{{ include.variant }}{{ medal }}" data-task="{{ e.task | escape }}">
+  <div class="lb-rank"><span class="lb-sr">Rank </span>{{ include.rank }}</div>
+
+  <div class="lb-main">
+    <p class="lb-name">
+      {%- if e.url -%}
+        <a href="{{ e.url }}" target="_blank" rel="noopener noreferrer">{{ e.algorithm }}</a>
+      {%- else -%}
+        {{ e.algorithm }}
+      {%- endif -%}
+      {%- if e.algorithm_note %} <span class="lb-info" tabindex="0" role="note" title="{{ e.algorithm_note | escape }}" aria-label="{{ e.algorithm_note | escape }}"><i class="fas fa-info-circle" aria-hidden="true"></i></span>{% endif -%}
+    </p>
+    <p class="lb-meta">
+      <span class="lb-chip"{% if e.task_note %} tabindex="0" title="{{ e.task_note | escape }}"{% endif %}>{{ e.task }}</span>
+      <span class="lb-submitted">Submitted by <b>{{ e.submitter }}</b> <span class="lb-nowrap">on <time datetime="{{ e.date | date: '%Y-%m-%d' }}">{{ e.date | date: "%Y-%m-%d" }}</time></span></span>
+    </p>
+  </div>
+
+  <div class="lb-score">
+    <span class="lb-score__label">Score</span>
+    <span class="lb-score__value">{{ score_parts[0] }}.{{ score_decimals }}</span>
+    <span class="lb-bar" style="--score: {{ score_pct }}%" aria-hidden="true"></span>
+  </div>
+
+  {%- if e.images and e.images.size > 0 %}
+  <div class="lb-thumbs">
+    {%- for img in e.images %}
+    <a class="lb-thumb" href="{{ img | relative_url }}" data-lightbox data-caption="{{ e.algorithm | escape }}, visualization {{ forloop.index }} of {{ forloop.length }}">
+      <img src="{{ img | relative_url }}" alt="Packing plan visualization {{ forloop.index }} of {{ e.algorithm | escape }}" width="56" height="56" loading="lazy" decoding="async">
+    </a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+
+  {%- if e.packing_plan or e.plans_url %}
+  <div class="lb-links">
+    {%- if e.packing_plan %}
+    <a class="lb-link" href="{{ e.packing_plan | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> Packing plan</a>
+    {%- endif %}
+    {%- if e.plans_url %}
+    <a class="lb-link" href="{{ e.plans_url }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" aria-hidden="true"></i> {{ e.plans_label | default: "All plans" }}</a>
+    {%- endif %}
+  </div>
+  {%- endif %}
+</li>

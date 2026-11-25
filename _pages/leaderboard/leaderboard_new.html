@@ -1,0 +1,139 @@
+---
+layout: category
+permalink: /leaderboard_new/
+title: "Leaderboard"
+author_profile: true
+classes: wide
+toc: true
+last_modified_at: 2026-11-25
+# Test page: keep it out of the sitemap and search engines until it replaces /leaderboard/.
+sitemap: false
+noindex: true
+extra_css:
+  - /assets/css/leaderboard.css
+extra_js:
+  - /assets/js/leaderboard.js
+---
+
+{% assign url_submission = "https://tinyurl.com/subm-bed-bpp-res" %}
+
+<div class="lb-page">
+
+<p class="lb-intro">
+  Ranking of solvers on the <tt>BED-BPP</tt> dataset. The score is the share of stable palletized items, so higher is better
+  (see <a href="#explanation-of-evaluation">Explanation of Evaluation</a>).
+</p>
+
+<p class="lb-quicklinks">
+  <a href="{{ url_submission }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-upload" aria-hidden="true"></i> Submit a packing plan</a>
+  <a href="#submission">How to submit</a>
+  <a href="#explanation-of-evaluation">How we evaluate</a>
+</p>
+
+{% include leaderboard/board.html %}
+
+<h3 id="description-of-tasks">Description of Tasks</h3>
+<p>
+  This section briefly describes the tasks for which <tt>BED-BPP</tt> is used. For a detailed description of the dataset,
+  please read our <a href="{{ '/publications/' | relative_url }}">publication</a>.
+</p>
+
+<div class="lb-cards">
+  <article class="lb-card">
+    <h4>Offline 3DBP</h4>
+    <p>The solver obtains all items that have to be packed. The solver is allowed to change the sequence of the items arbitrarily, i.e., the item sequence in the resulting packing plan might differ from the item sequence in <tt>BED-BPP</tt>.</p>
+  </article>
+  <article class="lb-card">
+    <h4>O3DBP <span>Online 3DBP</span></h4>
+    <p>In online three-dimensional bin packing, the solver must pack the items in a given, fixed sequence. This task can be interpreted as a three-dimensional version of the video game <a href="https://en.wikipedia.org/wiki/Tetris" target="_blank" rel="noopener noreferrer">Tetris</a>.</p>
+  </article>
+  <article class="lb-card">
+    <h4>O3DBP-p-s</h4>
+    <p>In this task, the solver knows the next <code>p</code> items and can select one of the next <code>s</code> items to place next. In general, for integers <code>p,s</code> it holds <code>p&gt;=s</code>.</p>
+  </article>
+</div>
+
+<h3 id="submission">Submission</h3>
+<p class="lb-center">
+  <a class="lb-cta" href="{{ url_submission }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-upload" aria-hidden="true"></i> Submission <i class="fab fa-dropbox" aria-hidden="true"></i></a>
+</p>
+<p>The link above opens a new tab with a file request of Dropbox. There, please upload two files:</p>
+
+<ol class="lb-steps">
+  <li>
+    <h4>Author Information</h4>
+    <p>
+      (<a href="{{ '/assets/submission_info/example_author_information.txt' | relative_url }}" target="_blank" rel="noopener noreferrer">example_author_information.txt</a>)
+      This .txt file contains information about the author such as the name of the <em>submitter</em>, the <em>e-mail address</em>
+      and the <em>filename</em> of the submitted packing plan.
+    </p>
+  </li>
+  <li>
+    <h4>Packing Plan</h4>
+    <p>
+      (<a href="{{ '/assets/submission_info/example_packing_plan.json' | relative_url }}" target="_blank" rel="noopener noreferrer">example_packing_plan.json</a>)
+      This .json file contains the list of actions for each order of the <tt>BED-BPP</tt>. An action contains information
+      about the placement, the item and its orientation, e.g.
+    </p>
+<pre class="lb-code"><code>action = {
+    "flb_coordinates": [0, 0, 0],
+    "item": {
+        "article": "article-id1",
+        "id": "id1",
+        "product_group": "product_group1",
+        "length/mm": 300,
+        "width/mm": 200,
+        "height/mm": 100,
+        "weight/kg": 3.14,
+        "sequence": 1
+    },
+    "orientation": 0
+}</code></pre>
+  </li>
+</ol>
+
+<aside class="lb-callout">
+  <p class="lb-callout__title">Naming convention</p>
+  <p>Please name your packing plan file in the following way:</p>
+  <p><code>{SUBMISSION_DATE}_{SURNAME_SUBMITTER}_{ALGORITHM_NAME}_{TASK}.json</code></p>
+  <p>For example, <code>2023-01-22_kagerer_algorithm1_o3dbp.json</code>.</p>
+</aside>
+
+<h3 id="explanation-of-evaluation">Explanation of Evaluation</h3>
+<p>
+  The score of an algorithm, which is decisive for the leaderboard's ranking, is the percentage of stable palletized items
+  within a certain height level.
+</p>
+<p>
+  To this end, for each packing plan a stability check in Blender is carried out. The following video shows stability checks
+  for four algorithms for order <code>"00100408"</code>.
+</p>
+
+<figure class="lb-video">
+  <video muted controls preload="metadata">
+    <source src="{{ '/assets/video/stability_check_video.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <figcaption>Stability checks for four algorithms, order 00100408.</figcaption>
+</figure>
+
+<p>
+  The <em>stability check is successful</em>, when any item's movement in the height is less than 0.01 meters for 10 seconds.
+  In the video, for <code>xflp</code> the stability check fails.
+</p>
+<p>Consequently, the contribution of this packing plan to the overall rating of <code>xflp</code> is zero.</p>
+<p>
+  For the stable piles of <code>Online-3D-BPP-PCT</code>, <code>O3DBP-3-2</code> and <code>sisyphus</code>, we have to determine
+  the amount of items that are completely placed below the height level of 2 meters. As an example, this procedure is
+  visualized for <code>sisyphus</code>' packing plan in the following video.
+</p>
+
+<figure class="lb-video">
+  <video muted controls preload="metadata">
+    <source src="{{ '/assets/video/example_evaluation_sisyphus_00100408.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <figcaption>Evaluation of the packing plan of <code>sisyphus</code>, order 00100408.</figcaption>
+</figure>
+
+<p>Finally, the remaining items contribute to the rating of an algorithm.</p>
+
+</div>

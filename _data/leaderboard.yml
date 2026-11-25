@@ -1,0 +1,89 @@
+# Entries of the BED-BPP leaderboard (page: /leaderboard_new/).
+#
+# To add a submission, append one block to this list. Rank, podium, score bar and the task filter are
+# built automatically: entries are sorted by `score` (highest first), equal scores share a rank.
+# The order of the entries in this file does not matter.
+#
+#   - algorithm: name                       # required
+#     url: https://...                      # optional, link of the algorithm
+#     algorithm_note: "..."                 # optional, tooltip next to the algorithm name
+#     task: Offline 3DBP                    # required, used for the label and the task filter
+#     task_note: "..."                      # optional, tooltip on the task label
+#     score: 0.724553                       # required, number between 0 and 1 (not quoted!)
+#     submitter: F. Kagerer                 # required, who submitted the packing plan (shown as "Submitted by"),
+#                                           # not necessarily the developer of the algorithm
+#     date: 2022-12-05                      # required, YYYY-MM-DD
+#     packing_plan: /assets/packing_plans/<file>.json   # optional, download link
+#     plans_url: https://...                # optional, link to all visualized packing plans or a video
+#     plans_label: "All plans (PDF)"        # optional, text of that link
+#     images:                               # optional, thumbnails (click to enlarge)
+#       - /assets/leaderboard_visualization/<name>/order_00100007.png
+
+- algorithm: sisyphus
+  url: https://github.com/josch/sisyphus
+  task: Offline 3DBP
+  score: 0.724553
+  submitter: F. Kagerer
+  date: 2022-12-05
+  packing_plan: /assets/packing_plans/2022-12-05_kagerer_sisyphus_offline3dbp.json
+  plans_url: "https://1drv.ms/b/s!AmjGTsdpTDmPhnHDhSYRYOQXgk2x?e=lsJuBV"
+  plans_label: "All plans (PDF, ~360 MB)"
+  images:
+    - /assets/leaderboard_visualization/sisyphus/order_00100007.png
+    - /assets/leaderboard_visualization/sisyphus/order_00100408.png
+    - /assets/leaderboard_visualization/sisyphus/order_00100970.png
+
+- algorithm: Online-3D-BPP-PCT
+  url: https://github.com/alexfrom0815/Online-3D-BPP-PCT
+  task: O3DBP
+  score: 0.197204
+  submitter: F. Kagerer
+  date: 2022-11-25
+  packing_plan: /assets/packing_plans/2022-11-25_kagerer_o3dbpp-pct_O3dbp.json
+  plans_url: "https://1drv.ms/b/s!AmjGTsdpTDmPhnXzJ44J9QgGsE-X"
+  plans_label: "All plans (PDF, ~360 MB)"
+  images:
+    - /assets/leaderboard_visualization/online-3d-bpp-pct/order_00100007.png
+    - /assets/leaderboard_visualization/online-3d-bpp-pct/order_00100408.png
+    - /assets/leaderboard_visualization/online-3d-bpp-pct/order_00100970.png
+
+- algorithm: banpu
+  algorithm_note: "Currently no implementation available."
+  task: LAHCSISR
+  task_note: "The algorithm uses Adaptive Large Neighborhood Search combined with heuristic packing strategies. It iteratively destroys and repairs pallet configurations through operators with adaptive weights, learning which strategies work best through extreme point placement."
+  score: 0.067303
+  submitter: K. Puphaiboon
+  date: 2025-10-28
+  packing_plan: /assets/packing_plans/puphaiboon/2025-10-28_puphaiboon_banpu_lahcsisr.json
+  plans_url: "https://youtu.be/s-lT_OoNtvs?si=UIS2oiXP9MxUjIpz"
+  plans_label: "Video"
+  images:
+    - /assets/leaderboard_visualization/puphaiboon/2025-10-28_puphaiboon_banpu_lahcsisr-00100408.png
+
+- algorithm: heuristic O3DBP-3-2
+  url: https://github.com/floriankagerer/bed-bpp-env/tree/main/code/heuristics/O3DBP_3_2.py
+  task: O3DBP-3-2
+  score: 0.020356
+  submitter: F. Kagerer
+  date: 2023-02-19
+  packing_plan: /assets/packing_plans/2023-02-19_kagerer_heuristic-O3DBP-3-2_O3DBP-3-2.json
+  plans_url: "https://1drv.ms/b/s!AmjGTsdpTDmPhnOJuX87XyiztQ7R"
+  plans_label: "All plans (PDF, ~360 MB)"
+  images:
+    - /assets/leaderboard_visualization/heuristic-o3dbp-3-2/order_00100007.png
+    - /assets/leaderboard_visualization/heuristic-o3dbp-3-2/order_00100408.png
+    - /assets/leaderboard_visualization/heuristic-o3dbp-3-2/order_00100970.png
+
+- algorithm: xflp
+  url: https://github.com/hschneid/xflp
+  task: Offline 3DBP
+  score: 0.010930
+  submitter: F. Kagerer
+  date: 2022-12-04
+  packing_plan: /assets/packing_plans/2022-12-04_kagerer_xflp_output_asc-z_offline3dbp.json
+  plans_url: "https://1drv.ms/b/s!AmjGTsdpTDmPhnBnKbw9WZ3_4g8_?e=2gkeEf"
+  plans_label: "All plans (PDF, ~360 MB)"
+  images:
+    - /assets/leaderboard_visualization/xflp/order_00100007.png
+    - /assets/leaderboard_visualization/xflp/order_00100408.png
+    - /assets/leaderboard_visualization/xflp/order_00100970.png
