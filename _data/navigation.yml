@@ -6,6 +6,8 @@ main:
     url: /leaderboard/
   - title: "Publications"
     url: /publications/
+  - title: "PET-Physics"
+    url: /pet-physics/
   - title: "About"
     url: /about/
   # - title: "Quick-Start Guide"
