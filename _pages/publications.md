@@ -3,7 +3,7 @@ layout: category
 permalink: /publications/
 title: "Publications"
 author_profile: true
-last_modified_at: 2023-01-22
+last_modified_at: 2026-11-25
 toc: true
 ---
 
@@ -16,10 +16,13 @@ toc: true
 <a href="https://robotik.informatik.uni-wuerzburg.de/telematics/download/ijrr2023.pdf" target="_blank">[URL]</a>
 
 
-<!--
 ### Conference Papers
-- tba
--->
+<!-- IEEE CASE: PET-Physics 2026 -->
+- F. Enzenhofer, J. Ondřej and A. Nüchter, "PET-Physics: A Packing Evaluation Tool Considering Physics," 2026 IEEE 22nd International Conference on Automation Science and Engineering (CASE), Shenyang, China, 2026, pp. 2164-2169, doi: 10.1109/CASE69030.2026.11704414.
+<a href="https://floriankagerer.github.io/assets/publications/enzenhoferetal2026-case.bib" target="_blank">[BibTeX]</a>
+<a href="https://doi.org/10.1109/CASE69030.2026.11704414" target="_blank">[DOI]</a>
+<a href="https://robotik.informatik.uni-wuerzburg.de/telematics/download/case2026.pdf" target="_blank">[URL]</a>
+
 
 ### Others
 <!--ARW 2021-->
