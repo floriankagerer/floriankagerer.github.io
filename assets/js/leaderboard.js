@@ -46,6 +46,13 @@
       });
     });
     applyFilter("");
+    // The toolbar appearing pushed the list down: bring a linked entry (#l2pack) back into view.
+    if (location.hash.length > 1) {
+      try {
+        var linked = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (linked && linked.classList.contains("lb-entry")) linked.scrollIntoView({ block: "center" });
+      } catch (e) { /* malformed hash */ }
+    }
   }
 
   /* ---------- click-to-enlarge images ---------- */

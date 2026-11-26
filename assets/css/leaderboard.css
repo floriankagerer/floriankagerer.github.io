@@ -190,6 +190,18 @@
   transition: border-color 0.15s, transform 0.15s;
 }
 .lb-entry--row:hover { border-color: rgba(229, 56, 59, 0.6); transform: translateY(-1px); }
+
+/* An entry that a link points to (e.g. /leaderboard_new/#l2pack) is highlighted with a ring and a short pulse. */
+.lb-entry { scroll-margin-top: 6rem; }
+.lb-entry:target {
+  border-color: var(--lb-accent-2);
+  box-shadow: 0 0 0 2px var(--lb-accent-2), 0 0 36px rgba(255, 138, 76, 0.4);
+  animation: lb-target-pulse 1.6s ease-out 2;
+}
+@keyframes lb-target-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px var(--lb-accent-2), 0 0 36px rgba(255, 138, 76, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(255, 138, 76, 0.55), 0 0 64px rgba(255, 138, 76, 0.7); }
+}
 .lb-entry--row .lb-rank { grid-area: rank; }
 .lb-entry--row .lb-main { grid-area: main; min-width: 0; }
 .lb-entry--row .lb-score { grid-area: score; }
@@ -312,6 +324,7 @@
 .lb-video figcaption { margin-top: 0.4rem; color: var(--lb-muted); font-size: 0.85em; text-align: center; }
 
 @media (prefers-reduced-motion: reduce) {
+  .lb-entry:target { animation: none; }
   .lb-quicklinks a:first-child::after { animation: none; display: none; }
   .lb-page *, .lb-dialog * { transition: none !important; }
   .lb-thumb:hover, .lb-entry--row:hover, .lb-cta:hover { transform: none; }
