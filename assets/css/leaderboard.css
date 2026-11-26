@@ -11,6 +11,9 @@
   --lb-gold: #f5c542;
   --lb-silver: #c7cfda;
   --lb-bronze: #d98a4e;
+  --lb-btn-grad: linear-gradient(135deg, #a82a2e, #bf4a22); /* highlighted buttons and pills: deeper than the accent */
+  --lb-chip-bg: #1a1e26;
+  --lb-chip-border: rgba(255, 255, 255, 0.07);
   --lb-radius: 14px;
 
   container-type: inline-size;
@@ -37,7 +40,7 @@
 .lb-quicklinks a:first-child {
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--lb-accent), var(--lb-accent-2));
+  background: var(--lb-btn-grad);
   color: #fff;
   font-weight: 600;
 }
@@ -64,19 +67,19 @@
 .lb-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .lb-filter {
   padding: 0.3rem 0.9rem;
-  border: 1px solid var(--lb-border);
+  border: 1px solid var(--lb-chip-border);
   border-radius: 999px;
-  background: var(--lb-surface);
-  color: var(--lb-text);
+  background: var(--lb-chip-bg);
+  color: #d3d9e2;
   font: inherit;
   font-size: 0.85em;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
 }
-.lb-filter:hover { border-color: var(--lb-accent); }
+.lb-filter:hover { border-color: var(--lb-accent); background: #20252e; }
 .lb-filter[aria-pressed="true"] {
   border-color: transparent;
-  background: linear-gradient(135deg, var(--lb-accent), var(--lb-accent-2));
+  background: var(--lb-btn-grad);
   color: #fff;
   font-weight: 600;
 }
@@ -261,10 +264,10 @@
   gap: 0.6rem;
   padding: 0.7rem 1.6rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--lb-accent), var(--lb-accent-2));
+  background: var(--lb-btn-grad);
   color: #fff;
   font-weight: 700;
-  box-shadow: 0 8px 24px rgba(229, 56, 59, 0.3);
+  box-shadow: 0 8px 24px rgba(168, 42, 46, 0.35);
   transition: transform 0.15s, filter 0.15s;
 }
 .lb-cta:hover { color: #fff; transform: translateY(-2px); filter: brightness(1.08); text-decoration: none; }
@@ -290,7 +293,7 @@
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--lb-accent), var(--lb-accent-2));
+  background: var(--lb-btn-grad);
   color: #fff;
   font-weight: 700;
 }
