@@ -87,3 +87,16 @@
     - /assets/leaderboard_visualization/xflp/order_00100007.png
     - /assets/leaderboard_visualization/xflp/order_00100408.png
     - /assets/leaderboard_visualization/xflp/order_00100970.png
+
+- algorithm: L2Pack
+  algorithm_note: "Currently no implementation available."
+  url: 
+  task: O3DBP
+  score: 0.305597152
+  submitter: R. Herrler
+  date: 2026-08-04
+  packing_plan: /assets/packing_plans/herrler/2026-08-04_herrler_L2Pack_o3dbp.json
+  plans_url: "https://youtu.be/nQ5NJASpBDs"
+  plans_label: "Video"
+  images:
+    - /assets/leaderboard_visualization/herrler/2026-08-04_herrler_L2Pack_o3dbp-00100408.png

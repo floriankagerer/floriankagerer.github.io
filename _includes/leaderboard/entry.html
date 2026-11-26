@@ -15,7 +15,7 @@
 {%- assign score_decimals = score_parts[1] | append: "0000" | slice: 0, 4 -%}
 {%- assign score_pct = e.score | times: 100 | at_most: 100 | at_least: 0 -%}
 
-<li class="lb-entry lb-entry--{{ include.variant }}{{ medal }}" data-task="{{ e.task | escape }}">
+<li class="lb-entry lb-entry--{{ include.variant }}{{ medal }}" id="{{ e.algorithm | slugify }}" data-task="{{ e.task | escape }}">
   <div class="lb-rank"><span class="lb-sr">Rank </span>{{ include.rank }}</div>
 
   <div class="lb-main">
