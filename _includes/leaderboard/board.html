@@ -3,7 +3,15 @@
   a rank ("1, 2, 2, 4"). The top 3 entries form the podium, the others are listed below it.
 {%- endcomment -%}
 {%- assign entries = site.data.leaderboard | sort: "score" | reverse -%}
-{%- assign tasks = entries | map: "task" | uniq | sort -%}
+{%- comment -%} Filter order: tasks listed in _data/leaderboard_tasks.yml first, all other tasks alphabetically after them. {%- endcomment -%}
+{%- assign all_tasks = entries | map: "task" | uniq | sort -%}
+{%- assign tasks = "" | split: "" -%}
+{%- for task in site.data.leaderboard_tasks -%}
+  {%- if all_tasks contains task -%}{%- assign tasks = tasks | push: task -%}{%- endif -%}
+{%- endfor -%}
+{%- for task in all_tasks -%}
+  {%- unless tasks contains task -%}{%- assign tasks = tasks | push: task -%}{%- endunless -%}
+{%- endfor -%}
 
 <section class="lb" id="leaderboard" aria-label="Leaderboard">
   {%- if entries.size > 0 %}
