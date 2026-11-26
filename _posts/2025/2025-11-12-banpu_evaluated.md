@@ -20,7 +20,7 @@ best through extreme point placement.
 
 We really look forward to reading the publication.
 
-Link to [leaderboard](/leaderboard/#:~:text=3,banpu) / [submission post](/posts/submission_received/banpu_lahcsisr).
+Link to [leaderboard](/leaderboard/#banpu) / [submission post](/posts/submission_received/banpu_lahcsisr).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s-lT_OoNtvs?si=UDTxXFZaRP-LN1WL" 
         title="YouTube video player" frameborder="0" 

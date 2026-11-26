@@ -15,7 +15,7 @@ Rainer Herrler's algorithm {{l2pack}} ranked **2nd**. It achieved a score of **0
 
 The algorithm will be fine tuned. Once there is a publication available, we update you.
 
-[View the leaderboard](/leaderboard_new/#l2pack) for the new **L2Pack** card.
+[View the leaderboard](/leaderboard/#l2pack) for the new **L2Pack** card.
 
 <iframe width="560" 
         height="315" 
