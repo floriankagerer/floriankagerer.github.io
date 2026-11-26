@@ -191,7 +191,7 @@
 }
 .lb-entry--row:hover { border-color: rgba(229, 56, 59, 0.6); transform: translateY(-1px); }
 
-/* An entry that a link points to (e.g. /leaderboard_new/#l2pack) is highlighted with a ring and a short pulse. */
+/* An entry that a link points to (e.g. /leaderboard/#l2pack) is highlighted with a ring and a short pulse. */
 .lb-entry { scroll-margin-top: 6rem; }
 .lb-entry:target {
   border-color: var(--lb-accent-2);
